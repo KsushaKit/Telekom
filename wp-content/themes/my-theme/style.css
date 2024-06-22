@@ -208,14 +208,34 @@ a {
     height: 97px;
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .footer {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    position: relative;
     width: 90%;
     justify-content: space-between;
+}
+
+.footer::before,
+.footer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #ccc; 
+}
+
+.footer::before {
+  top: 0;
+}
+
+.footer::after {
+  bottom: 0;
 }
 
 .footer__logo {
